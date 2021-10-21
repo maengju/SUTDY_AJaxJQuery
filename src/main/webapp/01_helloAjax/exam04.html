@@ -24,7 +24,9 @@ $('#mybtn').click(function(){
 	$.ajax({
 		url:"../text/textdata.jsp",
 		type:"get",
-		data:"keyword="+"hello ajax", //server로 보내는 데이터
+		
+		/* data:'keyword='+'hello ajax'server로 보내는 데이터 */
+		data:{'keyword' : 'Hello AJax'}, //json으로 보내기
 		dataType:"text", //서버로부터 받는 데이터 타입 
 		success:function(data){
 			$('#result').html(data);
