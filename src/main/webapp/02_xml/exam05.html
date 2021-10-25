@@ -128,7 +128,11 @@ h1 {
 					$(this).serialize(),
 					function(data){
 						var result= eval($(data).find('result').text()); //문자열 -> boolean
-						var message= $(data).find('massage').text();
+						
+						if(result){
+							alert($(data).find('message').text());
+							//return false;
+						}
 						
 						var num = $(data).find('num').text();
 						var writer = $(data).find('writer').text();
